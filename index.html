@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Module</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="news-module">
+
+        <nav class="category-nav">
+
+            <button>GÜNDEM</button>
+            <button>YAŞAM</button>
+            <button class="active">TEKNOLOJİ</button>
+            <button>SAĞLIK</button>
+            <button>SPOR</button>
+            <button>MAGAZİN</button>
+        </nav>
+
+        <div class="news-list">
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>Robotlar İş Başında Yeni Özellikler</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">1 Saat Önce · Teknoloji</span>
+                </div>
+                <img src="images/robot-news.png" alt="Robot teknolojileri haberi">
+            </div>
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>Yapay Zekâda Yeni Dönem</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">2 Saat Önce · Teknoloji</span>
+                </div>
+                <img src="images/news-aı.png" alt="Yapay zekâ haberi">
+            </div>
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>Artık İş Modeli Yapay Zekâ</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">3 Saat Önce · Teknoloji</span>
+                </div>
+                <img src="images/news-robots2.png" alt="Yapay zekâ iş modeli haberi">
+            </div>
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>Instagram’a Yeni Özellik Geldi</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">1 Gün Önce · Teknoloji</span>
+                </div>
+                <img src="images/news-instagram.png" alt="Instagram haberi">
+            </div>
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>Elektrikli Araçlara Yeni Teknoloji</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">1 Gün Önce · Teknoloji</span>
+                </div>
+                <img src="images/news-car.png" alt="Elektrikli araç teknolojisi haberi">
+            </div>
+
+            <div class="news-item">
+                <div class="news-content">
+                    <h2>“Apple’dan Yeni Güncelleme”</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="news-meta">1 Gün Önce · Teknoloji</span>
+                </div>
+                <img src="images/news-apple.png" alt="Apple güncelleme haberi">
+            </div>
+
+        </div>
+
+    </section>
+    <script>
+        const categoryButtons = document.querySelectorAll(".category-nav button");
+
+        categoryButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+
+                categoryButtons.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
